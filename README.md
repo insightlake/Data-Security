@@ -1,4 +1,4 @@
-<img style="width:100%;" src="dataexplorer.png">
+<img style="width:100%;" src="datasecurity.png">
 
 What is InsightLake Data Security?
 -----------
