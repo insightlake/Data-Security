@@ -1,9 +1,11 @@
-<img style="width:100%;" src="datasecurity.png">
+<img style="width:100%;" src="data-security-main.jpg">
 
 What is InsightLake Data Security?
 -----------
 
 InsightLake Data Explorer solution is part of InsightLake Data Platform. It provides an intuitive UI and allows users to connect to various data sources and explore the data eaisly.
+
+<img style="width:100%;" src="datasecurity.png">
 
 Users can explore data from diferent sources like:
 * File Systems : S3, HDFS, FTP, SFTP
