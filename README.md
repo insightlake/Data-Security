@@ -21,6 +21,8 @@ Insight Lake Security Manager solves this problem by allowing companies to manag
 * Monitor access rights regularly
 * Monitor queries and alerting based on policies
 * Protect data assets by modifying queries or blocking access
+* Protect unstructured data and mask/obfuscate sensitive information on Docs (PDF, Word, Text), Images etc.
+* Apply ML/DL models to discover information
 * Integration with metadata and governance policies
 * Using APIs and workflow tokenize data (One way hash, FPE - Format preserving encryption)
 * Comprehensive audit logs
