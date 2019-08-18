@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+echo "Starting InsightLake ..."
+
+export JAVA_HOME=/usr/java/default
+
+if [ "$JAVA_HOME" != "" ]; then
+    #echo "run java in $JAVA_HOME"
+    JAVA_HOME=$JAVA_HOME
+fi
+
+if [ "$JAVA_HOME" = "" ]; then
+    echo "Error: JAVA_HOME is not set."
+    exit 1
+fi
+
+JAVA=$JAVA_HOME/bin/java
+JAVA_HEAP_MAX=-Xmx1000m
+
+PRG="${0}"
+
+while [ -h "${PRG}" ]; do
+  ls=`ls -ld "${PRG}"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "${PRG}"`/"$link"
+  fi
+done
+
+EDP_HOME=`dirname ${PRG}`
+EDP_HOME=`cd ${EDP_HOME}/..;pwd`
+
+mkdir -p $EDP_HOME/logs
+cd $EDP_HOME/logs
+
+
+echo "$EDP_HOME"
+
+CLASSPATH="$EDP_HOME/conf:$EDP_HOME/libs:$EDP_HOME/bin"
+
+for f in $EDP_HOME/libs/*.jar; do
+    CLASSPATH=${CLASSPATH}:$f;
+done
+
+echo "Starting user apis ..."
+nohup java -jar $EDP_HOME/libs/edp-api-user-0.0.1-SNAPSHOT.jar com.insightlake.edp.api.user.Application --spring.config.name=api-user,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-user.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
+
+echo "Starting data apis"
+nohup java -jar $EDP_HOME/libs/edp-api-data-0.0.1-SNAPSHOT.jar com.insightlake.edp.api.data.Application --spring.config.name=api-data,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-data.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
+
+echo "Starting UI"
+nohup java -jar $EDP_HOME/libs/edp-ui-0.0.1-SNAPSHOT.jar com.insightlake.edp.ui.Application --spring.config.name=api-ui,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-ui.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
+
