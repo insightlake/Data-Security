@@ -166,6 +166,16 @@ Other governance activities
 
 To learn more, check out [http://insightlake.com/dataexplorer.html](http://insightlake.com/dataexplorer.html)
 
+## Endpoints
+<img style="width:100%;" src="images/monitor-tab/endpoint-page.png">
+
+## Assign Policy
+<img style="width:100%;" src="images/assign-policy-tab/assign-policy.png">
+
+## Onboard 
+<img style="width:100%;" src="images/onboard-tab/onboard-page.png">
+
+
 Installation
 ------
 * Download or clone the repository. 
