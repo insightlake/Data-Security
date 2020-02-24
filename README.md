@@ -129,7 +129,7 @@ Protect your data using DLP APIs to mask or encrypt in real time or batch mode. 
 
 ## Security Dashboards
 
-<img style="width:100%;" src="images/security-dashboard-page.jpeg">
+<img style="width:100%;" src="images/security-dashboard-page.png">
 
 Analyze and monitor all enterprise data assets using security dashboards
 
