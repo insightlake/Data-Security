@@ -69,7 +69,7 @@ Ad-hoc and periodic jobs to profile data store and identify sensitive informatio
 
 ## Central Policy Manager
 
-<img style="width:100%;" src="images/datasecurity-policy.jpeg">
+<img style="width:100%;" src="images/policy-tab/data-location-policy.png">
 
 Security Manger provides an interactive policy manager UI, which allows security admins to manage enterprise data assets from one place. They can explore data assets, monitor them, create policies, check audit logs and see dashboards.
 
@@ -78,7 +78,7 @@ Security Manager integrates with Metadata and Governance solutions and provides 
 
 ## Manage users
 
-<img style="width:100%;" src="images/datasecurity-user.jpeg">
+<img style="width:100%;" src="images/setting-tab/user-page.png">
 
 Security Manager allows companies to import or provision users manually. Users can be easily imported from AD systems. AD integration allows automatic policy handling for users who are removed from AD on their termination.
 
@@ -88,7 +88,7 @@ Security Manager allows security admins to monitor user access rights based on u
 ## Security Agents
 Security agents are the main actors, they load policies from central policy server, monitor traffic, apply policies, generate alerts, modify queries for data protection and block access.
 
-<img style="width:100%;" src="images/datasecurity-agent.jpeg">
+<img style="width:100%;" src="images/agent-tab/agent-page.png">
 
 Security agents are divided in two types:
 
@@ -104,7 +104,7 @@ Enterprises can utilize rich set of policy rules to control access to data. Rule
 ## Rich Rules
 Enterprises can utilize rich set of policy rules to control access to data. Rules include:
 
-<img style="width:100%;" src="images/datasecurity-policy.jpeg">
+<img style="width:100%;" src="images/policy-tab/data-location-policy.png">
 
 * Coarse Grain Permissions - allow, deny
 * Allow or deny data set joins
@@ -116,7 +116,7 @@ Enterprises can utilize rich set of policy rules to control access to data. Rule
 ## Comprehensive Audit
 Security manager captures provides comprehensive audit of data assets as well operational policies. It provides :
 
-<img style="width:100%;" src="images/datasecurity-audit.jpeg">
+<img style="width:100%;" src="images/audit-tab/audit-page.png">
 
 Data access logs - captures details about user, data store, location, time, original query and modified queries by policies.
 Policy changes logs - captures user, time and policy changes
@@ -129,7 +129,7 @@ Protect your data using DLP APIs to mask or encrypt in real time or batch mode. 
 
 ## Security Dashboards
 
-<img style="width:100%;" src="images/datasecurity-dashboard.jpeg">
+<img style="width:100%;" src="images/security-dashboard-page.jpeg">
 
 Analyze and monitor all enterprise data assets using security dashboards
 
