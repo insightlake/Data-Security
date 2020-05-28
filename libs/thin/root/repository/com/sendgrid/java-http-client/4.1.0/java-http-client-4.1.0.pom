@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sendgrid</groupId>
+  <artifactId>java-http-client</artifactId>
+  <version>4.1.0</version>
+  <name>http</name>
+  <description>A simple HTTP client</description>
+  <url>https://github.com/sendgrid/java-http-client</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>thinkingserious</id>
+      <name>Elmer Thomas</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git@github.com:sendgrid/java-http-client.git</connection>
+    <developerConnection>scm:git@github.com:sendgrid/java-http-client.git</developerConnection>
+    <url>scm:git@github.com:sendgrid/java-http-client.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.4</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.10.19</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit-dep</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.2</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sendgrid</groupId>
+  <artifactId>sendgrid-java</artifactId>
+  <version>4.1.2</version>
+  <name>sendgrid-java</name>
+  <description>SendGrid Java helper library</description>
+  <url>https://github.com/sendgrid/sendgrid-java</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>thinkingserious</id>
+      <name>Elmer Thomas</name>
+    </developer>
+    <developer>
+      <id>scottmotte</id>
+      <name>Scott Motte</name>
+    </developer>
+    <developer>
+      <id>elbou8</id>
+      <name>Yamil Asusta</name>
+    </developer>
+    <developer>
+      <id>eddiezane</id>
+      <name>Eddie Zaneski</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git@github.com:sendgrid/sendgrid-java.git</connection>
+    <developerConnection>scm:git@github.com:sendgrid/sendgrid-java.git</developerConnection>
+    <url>scm:git@github.com:sendgrid/sendgrid-java.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>com.sendgrid</groupId>
+      <artifactId>java-http-client</artifactId>
+      <version>4.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.5.3</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.5.3</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.5.3</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.querydsl</groupId>
+  <artifactId>querydsl-parent</artifactId>
+  <version>0.1.0</version>
+  <name>Querydsl Parent POM</name>
+  <description>Parent project for Querydsl related projects</description>
+  
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>  
+  
+  <url>http://www.github.com/querydsl/querydsl-parent</url>
+  <packaging>pom</packaging>
+
+  <inceptionYear>2015</inceptionYear>
+  
+  <organization>
+    <name>Querydsl</name>
+    <url>http://www.querydsl.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>timowest</id>
+      <name>Timo Westkämper</name>
+      <roles>
+        <role>Project Manager</role>
+        <role>Architect</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>Shredder121</id>
+      <name>Ruben Dijkstra</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>johnktims</id>
+      <name>John Tims</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:querydsl/querydsl-parent.git</connection>
+    <url>git@github.com:querydsl/querydsl-parent.git</url>
+  </scm>
+
+  <properties>
+    <gpg.skip>true</gpg.skip>
+  </properties>
+    
+  <build>      
+    <plugins>   
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>            
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>            
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>               
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <skip>${gpg.skip}</skip>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>      
+    </plugins>               
+  </build>      
+
+</project>

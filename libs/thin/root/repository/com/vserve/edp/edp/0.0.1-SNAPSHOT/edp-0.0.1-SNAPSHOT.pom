@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.vserve.edp</groupId>
+	<artifactId>edp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<properties>
+
+
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.1.RELEASE</version>
+	</parent>
+
+	<modules>
+		<module>edp-db</module>
+		<module>edp-api-user</module>
+		<module>edp-common</module>
+		<module>edp-notify</module>
+		<module>edp-cluster</module>
+		<module>edp-schema-reg</module>
+		<module>edp-zookeeper</module>
+		<module>edp-cluster-verification</module>
+		<module>edp-kafka</module>
+		<module>edp-api-data</module>
+		<module>edp-notebook</module>
+		<module>edp-cloud-lake</module>
+		<module>edp-catalog</module>
+		<module>edp-security</module>
+		<module>edp-query</module>
+		<module>edp-kconnect</module>
+		<module>edp-kafkarest-mon</module>
+		<module>edp-kafka-perf</module>
+		<module>edp-mockdata</module>
+		<module>edp-io</module>
+		<module>edp-stream-fetch</module>
+		<module>edp-ftp</module>
+		<module>edp-profile</module>
+		<module>edp-config</module>
+		<module>edp-git</module>
+		<module>edp-excel</module>
+		<module>edp-security-api</module>
+		<module>edp-datascience</module>
+		<module>edp-datascience-ui</module>
+		<module>edp-dashboard-ui</module>
+		<module>kafka-report</module>
+		<module>edp-csr</module>
+		<module>edp-api-csr</module>
+		<module>edp-kafka-sasl</module>
+		<module>edp-calls-analytics</module>
+		<module>transcript-mock-data</module>
+		<module>mongo-mock-data</module>
+        <module>edp-cluster-verification-ui</module>
+		<module>edp-security-api-ui</module>
+		<module>edp-explorer-ui</module>
+		<module>edp-schema-ui</module>
+		<module>edp-zookeeper-ui</module>
+		<module>edp-streams-ui</module>
+		<module>edp-catalog-ui</module>
+		<module>edp-mockdata-ui</module>
+		<module>edp-dlp-ui</module>
+
+		<module>edp-kafka-designer</module>
+		<module>edp-activity</module>
+		<module>edp-content-extractor</module>
+		<module>edp-data</module>
+
+
+		<module>edp-nlp-ui</module>
+		<module>edp-workbench-ui</module>
+		<module>edp-etl-ui</module>
+		<module>edp-labeling-ui</module>
+		<module>edp-callinsights-ui</module>
+		<module>edp-cmp-ui</module>
+		<module>edp-vagent-ui</module>
+		<module>edp-gcp-mockdata</module>
+		<module>edp-process-csr</module>
+
+		<module>edp-report-maker</module>
+	</modules>
+	<distributionManagement>
+
+		<repository>
+			<id>maven-s3-snapshot-repo</id>
+			<name>S3 Snapshot Repository</name>
+			<url>s3://vserve-edp/snapshots</url>
+		</repository>
+	</distributionManagement>
+	<!-- <dependencyManagement> <dependencies> <dependency> <groupId>org.springframework.boot</groupId> 
+		<artifactId>spring-boot-starter-data-jpa</artifactId> </dependency> <dependency> 
+		<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> 
+		</dependency> </dependencies> </dependencyManagement> -->
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<!-- or whatever version you use -->
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>

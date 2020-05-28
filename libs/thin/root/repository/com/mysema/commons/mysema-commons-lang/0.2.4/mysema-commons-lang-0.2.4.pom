@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.mysema.home</groupId>
+    <artifactId>mysema-source</artifactId>
+    <version>0.3.0</version>
+  </parent>
+
+  <groupId>com.mysema.commons</groupId>
+  <artifactId>mysema-commons-lang</artifactId>
+  <version>0.2.4</version>
+  <packaging>jar</packaging>
+  <name>lang</name>
+  
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <scm>
+    <connection>scm:svn:https://source.mysema.com/svn/mysema/projects/commons/l10n/trunk/</connection>
+    <url>https://source.mysema.com/svn/mysema/projects/commons/l10n/trunk/</url>
+  </scm>  
+    
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.4</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>     
+  </dependencies>  
+    
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <useDefaultManifestFile>true</useDefaultManifestFile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.springsource.bundlor</groupId>
+        <artifactId>com.springsource.bundlor.maven</artifactId>
+        <version>1.0.0.RELEASE</version>
+        <executions>
+          <execution>
+            <id>bundlor</id>
+            <goals>
+              <goal>bundlor</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <failOnWarnings>true</failOnWarnings>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

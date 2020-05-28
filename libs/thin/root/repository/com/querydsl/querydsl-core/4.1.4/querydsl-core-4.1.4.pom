@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.querydsl</groupId>
+    <artifactId>querydsl-root</artifactId>
+    <version>4.1.4</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <groupId>com.querydsl</groupId>
+  <artifactId>querydsl-core</artifactId>
+  <name>Querydsl - Core module</name>
+  <description>core module for querydsl</description>
+  <url>${project.homepage}</url>
+  <packaging>jar</packaging>
+  
+  <scm>
+    <connection>${project.checkout}</connection>
+    <developerConnection>${project.checkout}</developerConnection>
+    <url>${project.githubpage}</url>
+  </scm>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+      <version>1.3.9</version>
+    </dependency>          
+    <dependency>
+      <groupId>com.mysema.commons</groupId>
+      <artifactId>mysema-commons-lang</artifactId>
+      <version>${mysema.lang.version}</version>
+    </dependency>     
+    
+    <!-- alias dependencies -->
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>${cglib.version}</version>
+      <optional>true</optional>
+    </dependency>
+    
+     <!-- backwards compatibility -->
+    <dependency>
+      <groupId>com.infradna.tool</groupId>
+      <artifactId>bridge-method-annotation</artifactId>
+      <version>${bridge-method.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jenkins-ci</groupId>
+          <artifactId>annotation-indexer</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jvnet.hudson</groupId>
+      <artifactId>annotation-indexer</artifactId>
+      <version>1.2</version>
+      <optional>true</optional>
+    </dependency>
+    
+    <!--  test -->    
+    <dependency>
+      <groupId>jdepend</groupId>
+      <artifactId>jdepend</artifactId>
+      <version>2.9.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.infradna.tool</groupId>
+        <artifactId>bridge-method-injector</artifactId>
+        <version>${bridge-method.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>process</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>com.infradna.tool</groupId>
+            <artifactId>bridge-method-annotation</artifactId>
+            <version>${bridge-method.version}</version>
+            <optional>true</optional>
+            <exclusions>
+              <exclusion>
+                <groupId>org.jenkins-ci</groupId>
+                <artifactId>annotation-indexer</artifactId>
+              </exclusion>
+            </exclusions>
+          </dependency>
+          <dependency>
+            <groupId>org.jvnet.hudson</groupId>
+            <artifactId>annotation-indexer</artifactId>
+            <version>1.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>test-jar</id>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <properties>
+    <bridge-method.version>1.13</bridge-method.version>
+  </properties>
+</project>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starters</artifactId>
+    <version>2.0.1.RELEASE</version>
+  </parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-quartz</artifactId>
+  <version>2.0.1.RELEASE</version>
+  <name>Spring Boot Quartz Starter</name>
+  <description>Starter for using the Quartz scheduler</description>
+  <url>https://projects.spring.io/spring-boot/#/spring-boot-parent/spring-boot-starters/spring-boot-starter-quartz</url>
+  <organization>
+    <name>Pivotal Software, Inc.</name>
+    <url>https://spring.io</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Pivotal</name>
+      <email>info@pivotal.io</email>
+      <organization>Pivotal Software, Inc.</organization>
+      <organizationUrl>http://www.spring.io</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/spring-projects/spring-boot.git/spring-boot-starters/spring-boot-starter-quartz</connection>
+    <developerConnection>scm:git:ssh://git@github.com/spring-projects/spring-boot.git/spring-boot-starters/spring-boot-starter-quartz</developerConnection>
+    <url>http://github.com/spring-projects/spring-boot/spring-boot-starters/spring-boot-starter-quartz</url>
+  </scm>
+  <issueManagement>
+    <system>Github</system>
+    <url>https://github.com/spring-projects/spring-boot/issues</url>
+  </issueManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>2.0.1.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>5.0.5.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>5.0.5.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz</artifactId>
+      <version>2.3.0</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>c3p0</artifactId>
+          <groupId>com.mchange</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>HikariCP-java6</artifactId>
+          <groupId>com.zaxxer</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</project>

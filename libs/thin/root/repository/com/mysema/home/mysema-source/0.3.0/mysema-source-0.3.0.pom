@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mysema.home</groupId>
+  <artifactId>mysema-source</artifactId>
+  <version>0.3.0</version>
+  <name>Mysema Source</name>
+  
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>  
+  
+  <description>OpenSource projects hosted by Mysema Ltd</description>
+  <url>http://www.github.com/mysema</url>
+  <packaging>pom</packaging>
+
+  <inceptionYear>2008</inceptionYear>
+  
+  <organization>
+    <name>Mysema Ltd</name>
+    <url>http://www.mysema.com</url>
+  </organization>
+  
+  <properties>
+    <gpg.skip>true</gpg.skip>
+  </properties>
+    
+  <build>      
+    <plugins>   
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>            
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>            
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>               
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <skip>${gpg.skip}</skip>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>      
+    </plugins>               
+  </build>      
+
+  <developers>
+    <developer>
+      <id>tiwe</id>
+      <name>Timo Westkämper</name>
+      <email>timo.westkamper@mysema.com</email>
+      <organization>Mysema Ltd</organization>
+      <roles>
+        <role>Architect</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>laim</id>
+      <name>Lassi Immonen</name>
+      <email>lassi.immonen@mysema.com</email>
+      <organization>Mysema Ltd</organization>
+      <roles>
+        <role>Consultant</role>
+      </roles>
+    </developer>
+  </developers>
+  
+</project>

@@ -44,12 +44,9 @@ for f in $EDP_HOME/libs/*.jar; do
     CLASSPATH=${CLASSPATH}:$f;
 done
 
-echo "Starting user apis ..."
-nohup java -jar $EDP_HOME/libs/edp-api-user-0.0.1-SNAPSHOT.jar com.insightlake.edp.api.user.Application --spring.config.name=api-user,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-user.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
+echo "Starting Data-Security backend ..."
+nohup java -Dthin.root=$EDP_HOME/libs/thin/root -jar $EDP_HOME/libs/thin/root/edp-security-api-0.0.1-SNAPSHOT.jar --spring.config.name=h2 --spring.config.location=$EDP_HOME/conf/h2.properties >/dev/null 2>&1 &
 
-echo "Starting data apis"
-nohup java -jar $EDP_HOME/libs/edp-api-data-0.0.1-SNAPSHOT.jar com.insightlake.edp.api.data.Application --spring.config.name=api-data,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-data.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
-
-echo "Starting UI"
-nohup java -jar $EDP_HOME/libs/edp-ui-0.0.1-SNAPSHOT.jar com.insightlake.edp.ui.Application --spring.config.name=api-ui,jdbc --spring.config.location=file:///$EDP_HOME/conf/api-ui.properties,file:///$EDP_HOME/conf/jdbc.properties >/dev/null 2>&1 &
+echo "Starting Data-Security UI"
+nohup java -jar $EDP_HOME/libs/edp-security-api-ui-1.0.jar com.insightlake.edp.streams.designer.app.Application --spring.config.name=ui --spring.config.location=$EDP_HOME/conf/ui.properties >/dev/null 2>&1 &
 
