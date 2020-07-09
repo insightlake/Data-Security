@@ -1,0 +1,16 @@
+version: "2.0"
+
+services:
+  datasecurity-backend-service:
+    build:
+      context: ../libs
+      dockerfile: ./datasecuritybacked
+    ports:
+    - 9494:9494
+
+  datasecurity-ui-service:
+    build:
+      context: ../libs
+      dockerfile: ./datasecurityui
+    ports:
+    - 8080:8080
