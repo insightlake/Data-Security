@@ -187,9 +187,14 @@ Installation
 Installation using docker 
 ------
 * Download or clone the repository. 
-* Change configuration in lib h2.properties file
-* cd docker
-* docker-compose -f docker-compose.yaml up 
+* cd /docker
+* Run `docker-compose -f docker-compose.yaml up --build`
+* Open browser with URL as http://localhost:8080/
+* While creating Data Location use below credentials  
+
+        * username : root
+        * password : password
+        * URL :  jdbc:mysql://mysql:3306/
 
 
 License
