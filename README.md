@@ -164,7 +164,7 @@ Sensitive queries - drop and truncate
 Schema changes
 Other governance activities
 
-To learn more, check out [http://insightlake.com/dataexplorer.html](http://insightlake.com/dataexplorer.html)
+To learn more, check out [http://insightlake.com/data-security.html](http://insightlake.com/data-security.html)
 
 ## Endpoints
 <img style="width:100%;" src="images/monitor-tab/endpoint-page.png">
@@ -199,7 +199,7 @@ Installation using docker
 
 License
 ------
-InsightLake Data Explorer is a commercial product but distributed to be used freely. Please contact contact@insightlake.com for details.
+InsightLake Data Security is a commercial product but distributed to be used freely. Please contact contact@insightlake.com for details.
 
 Getting Help
 ----------
