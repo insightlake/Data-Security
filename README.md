@@ -164,8 +164,6 @@ Sensitive queries - drop and truncate
 Schema changes
 Other governance activities
 
-To learn more, check out [http://www.insightlake.com/data-security.html](http://www.insightlake.com/data-security.html)
-
 ## Endpoints
 <img style="width:100%;" src="images/monitor-tab/endpoint-page.png">
 
@@ -175,6 +173,8 @@ To learn more, check out [http://www.insightlake.com/data-security.html](http://
 ## Onboard 
 <img style="width:100%;" src="images/onboard-tab/onboard-page.png">
 
+
+To learn more, check out [http://www.insightlake.com/data-security.html](http://www.insightlake.com/data-security.html)
 
 Installation
 ------
